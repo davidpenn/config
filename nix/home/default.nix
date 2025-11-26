@@ -136,12 +136,12 @@
       };
       url."git@github.com:".insteadOf = "https://github.com/";
       user = {
-        name = "David Penn";
-        email = "david.penn@me.com";
+        name = lib.mkDefault "David Penn";
+        email = lib.mkDefault "david.penn@me.com";
       };
     };
     signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFgbwoqV/UFX81s+MzciX05LJFltkE8z28KuDbTYbb5";
+      key = lib.mkDefault "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHFgbwoqV/UFX81s+MzciX05LJFltkE8z28KuDbTYbb5";
       signByDefault = true;
     };
   };
