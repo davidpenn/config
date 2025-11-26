@@ -35,6 +35,7 @@
 
           # Backup & Storage
           pkgs.autorestic
+          pkgs.restic
 
           # Development Tools
           pkgs.claude-code
@@ -56,7 +57,7 @@
           pkgs.databricks-cli
           pkgs.duckdb
           pkgs.postgresql
-          pkgs.spark
+          (import ../pkgs/spark.nix { inherit pkgs; })
 
           # CLI Utilities
           pkgs.eza
