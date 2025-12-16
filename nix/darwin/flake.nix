@@ -50,6 +50,7 @@
           pkgs.fnm
           pkgs.go
           pkgs.golangci-lint
+          pkgs.nodejs_24
           pkgs.scala_2_12
           pkgs.sbt
           pkgs.uv
