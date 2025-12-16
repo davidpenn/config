@@ -46,6 +46,7 @@
           pkgs.stow
 
           # Languages & Runtimes
+          pkgs.bun
           pkgs.fnm
           pkgs.go
           pkgs.golangci-lint
@@ -169,6 +170,12 @@
     darwinConfigurations."ssc" = nix-darwin.lib.darwinSystem {
       modules = [
         (mkDarwinConfiguration { primaryUser = "davidpenn"; })
+        {
+          homebrew.casks = [
+            # Development & Infrastructure
+            "docker-desktop"
+          ];
+        }
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
