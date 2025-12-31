@@ -25,6 +25,7 @@
         [
           # Cloud & Infrastructure
           pkgs.awscli
+          pkgs.doctl
           pkgs.doppler
           pkgs.kubectl
           pkgs.kubernetes-helm
@@ -36,8 +37,10 @@
           # Backup & Storage
           pkgs.autorestic
           pkgs.restic
+          pkgs.rclone
 
           # Development Tools
+          pkgs.buf
           pkgs.claude-code
           pkgs.git
           pkgs.gh
@@ -69,6 +72,7 @@
           pkgs.ripgrep
           pkgs.saml2aws
           pkgs.zoxide
+          pkgs.zstd
         ];
 
       homebrew = {
@@ -91,7 +95,6 @@
           "jetbrains-toolbox"
           "tower"
           "visual-studio-code"
-          "warp"
 
           # Productivity & Utilities
           "keepingyouawake"

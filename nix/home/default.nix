@@ -21,6 +21,7 @@
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
+    config.global.load_dotenv = true;
   };
 
   programs.eza = {
@@ -43,6 +44,8 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
+      format = ''$username$hostname$directory$git_branch$git_status$git_state$line_break$character'';
+
       add_newline = false;
     };
   };

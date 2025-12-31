@@ -81,7 +81,7 @@ let
       spark.hadoop.fs.s3.impl org.apache.hadoop.fs.s3a.S3AFileSystem
       EOF
 
-      # Fix wrapper scripts to point to our modified Spark and set SPARK_LOCAL_HOSTNAME
+      # Fix wrapper scripts to point to our modified Spark
       for wrapper in $out/bin/*; do
         if [ -f "$wrapper" ] && grep -q "${sparkBase}" "$wrapper" 2>/dev/null; then
           ${pkgs.gnused}/bin/sed -i "s|${sparkBase}|$out|g" "$wrapper"
